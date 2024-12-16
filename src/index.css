@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stili personalizzati base */
+@layer base {
+  :root {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #111827, #212529);
+    overflow-x: hidden;
+    /* Aggiunto questa riga */
+  }
+}
+
+/* Stili componenti personalizzati */
+@layer components {
+  .custom-button {
+    @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-900 cursor-pointer transition-colors hover:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/50;
+  }
+}
