@@ -22,7 +22,7 @@ const PrivacyPolicy: React.FC = () => {
                 <section className="mb-12 text-center">
                     <Calendar className="inline-block mb-2 text-green-400" size={24} />
                     <p className="text-sm sm:text-base text-gray-400">
-                        Last Updated: December 16, 2024
+                        Last Updated: December 18, 2024
                     </p>
                 </section>
 
