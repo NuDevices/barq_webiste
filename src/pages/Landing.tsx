@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet";
 
 // Component imports
 import AutoScrollingTiles from '../components/AutoScrollingTiles';
-import PerformanceComparison from '../components/PerformanceComparison';
 import { sendEmailRequest } from '../components/EmailService';
 
 // Asset imports

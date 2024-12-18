@@ -1,7 +1,6 @@
 // src/pages/PrivacyPolicy.tsx
 import React from 'react';
 import { Shield, Lock, Eye, FileText, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const PrivacyPolicy: React.FC = () => {
     return (
