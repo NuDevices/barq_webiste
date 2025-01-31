@@ -13,7 +13,7 @@ const PrivacyPolicy: React.FC = () => {
                         Privacy <span className="text-green-400">Policy</span>
                     </h1>
                     <p className="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
-                        At NuDevices, your privacy and data security are paramount. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our website and services.
+                        At NudgeV, your privacy and data security are paramount. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our website and services.
                     </p>
                 </section>
 
@@ -21,7 +21,7 @@ const PrivacyPolicy: React.FC = () => {
                 <section className="mb-12 text-center">
                     <Calendar className="inline-block mb-2 text-green-400" size={24} />
                     <p className="text-sm sm:text-base text-gray-400">
-                        Last Updated: December 18, 2024
+                        Last Updated: January 31, 2025
                     </p>
                 </section>
 
@@ -133,7 +133,7 @@ const PrivacyPolicy: React.FC = () => {
                         If you have any questions about this Privacy Policy, please contact us at:
                     </p>
                     <p className="text-lg sm:text-xl leading-relaxed mb-8">
-                        Email: <a href="mailto:info@nudevices.ai" className="text-green-400 hover:underline">info@nudevices.ai</a><br />
+                        Email: <a href="mailto:info@nudgev.ai" className="text-green-400 hover:underline">info@nudgev.ai</a><br />
                         Telephone: <a href="https://wa.me/971585883846" className="text-green-400 hover:underline">+971 585883846</a>
                     </p>
                 </section>

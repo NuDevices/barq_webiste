@@ -75,8 +75,8 @@ export const AutoScrollingTiles: React.FC<AutoScrollingTilesProps> = ({ tiles })
                         className="flex-none w-[280px] md:w-96 bg-gray-900/50 rounded-xl p-6 md:p-8 flex flex-col justify-between select-none"
                     >
                         <div>
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-3">{tile.title}</h3>
-                            <p className="text-base sm:text-lg md:text-xl text-gray-400">{tile.description}</p>
+                            <h3 className="text-md sm:text-lg md:text-xl font-bold mb-2 md:mb-3">{tile.title}</h3>
+                            <p className="text-base sm:text-md md:text-lg text-gray-400">{tile.description}</p>
                         </div>
                     </div>
                 ))}

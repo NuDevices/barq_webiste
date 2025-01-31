@@ -9,7 +9,7 @@ interface EmailData {
 }
 
 export const sendEmailRequest = async (data: EmailData) => {
-    const apiUrl = 'https://api.nudevices.ai/v1/send_waitlist_email/';
+    const apiUrl = 'https://api.nudgev.ai/v1/send_waitlist_email/';
     const payload = {
         subject: `${data.name} - ${data.company} - Contact Form`,
         body: data.message,
