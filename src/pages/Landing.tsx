@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white text-black font-sans overflow-hidden">
+    <div className="relative min-h-screen bg-white text-black font-sans overflow-hidden pt-24">
       <Header />
 
 
@@ -25,7 +25,7 @@ const Landing: React.FC = () => {
 
       {/* Premium Divider with Icons */}
       <div className="flex justify-center items-center mt-2 space-x-6 text-gray-500">
-        <span>🔬 Advanced AI Research</span>
+        <span>🔬 Advanced AI</span>
         <span>🚀 Edge Acceleration</span>
         <span>🇦🇪 Made in UAE</span>
       </div>
@@ -33,12 +33,12 @@ const Landing: React.FC = () => {
       {/* CTA Buttons */}
       <div className="flex justify-center mt-8 space-x-4 mb-16"> {/* Add mb-16 for extra bottom margin */}
         <Link to="/products">
-          <button className="bg-gray-900 text-white px-8 py-4 rounded-lg text-lg hover:bg-black">
+          <button className="bg-[#2CB2DD] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#1A8CB3]">
             Explore Products
           </button>
         </Link>
         <Link to="/contact">
-          <button className="border border-gray-400 px-8 py-4 rounded-lg text-lg hover:border-gray-600">
+          <button className="border border-gray-400 px-6 py-3 rounded-lg text-lg hover:bg-gray-200">
             Get in Touch
           </button>
         </Link>

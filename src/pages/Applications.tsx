@@ -14,7 +14,7 @@ import automotive from "../assets/Automotive.jpeg";
 
 const Applications: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div className="min-h-screen bg-white text-black font-sans pt-24">
       <Header />
 
       <GridSection title="Applications" subtitle="Accelerating the World to 2071 by 2031">
@@ -64,3 +64,4 @@ const Applications: React.FC = () => {
 };
 
 export default Applications;
+

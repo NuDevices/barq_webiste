@@ -14,7 +14,7 @@ import productPcie from "../assets/PCIe.png";
 // Image size settings (uniform tile sizing)
 const Products: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div className="min-h-screen bg-white text-black font-sans pt-24">
       <Header />
     <StandardSection title="Products" subtitle="NudgeV AI Vision Acceleration Hardware">
         <div className="space-y-8">
@@ -55,9 +55,12 @@ const Products: React.FC = () => {
                 <p className="text-2xl text-gray-600">{product.desc}</p>
                 <div className="mt-8 flex justify-center md:justify-start space-x-8">
                   <Link to="/contact">
-                    <button className="bg-gray-900 text-white px-6 py-3 rounded-md text-xl">{product.button1}</button>
+                    <button className="bg-[#2CB2DD] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#1A8CB3]">{product.button1}</button>
                   </Link>
-                  <button className="border border-gray-400 px-6 py-3 rounded-md text-xl">{product.button2}</button>
+                  <button 
+                  onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
+                  className="border border-gray-400 px-6 py-3 rounded-lg text-lg hover:bg-gray-200">{product.button2}
+                  </button>
                 </div>
               </div>
             </div>

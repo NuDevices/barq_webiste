@@ -1,26 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/nudge.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <title>BARQTECH – AI Acceleration</title>
+  <meta name="description" content="Next-gen AI acceleration hardware for edge computing and smart industries." />
 
-  <!-- Font Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ✅ Favicon & Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <!-- Metadata -->
-  <meta name="description" content="NU Devices - Edge AI Accelerator Chips" />
-  <meta name="theme-color" content="#111827" />
+  <!-- ✅ Web Manifest -->
+  <link rel="manifest" href="/site.webmanifest" />
 
-  <title>NU Devices - Edge AI Accelerator</title>
+  <!-- ✅ OpenGraph Meta for Social Previews -->
+  <meta property="og:title" content="BARQTECH – AI Acceleration" />
+  <meta property="og:description" content="AI acceleration hardware that brings data-center level intelligence to the edge." />
+  <meta property="og:image" content="/android-chrome-512x512.png" />
+  <meta property="og:url" content="https://barqtech.ae" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Load Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+
+  <!-- ✅ Vite will handle CSS (index.css is not needed directly) -->
+  <!-- Vite loads CSS from JS files, so this is not required:
+  <link rel="stylesheet" href="/index.css" /> 
+  -->
+
+  <!-- ✅ Load the React App -->
+  <script type="module" src="/src/main.tsx"></script>
+
 </head>
 
 <body>
+  <!-- ✅ Root Element Where React Will Render -->
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>

@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
             </div>
 
             <textarea name="message" placeholder="Message" className="w-full p-3 border rounded-lg bg-gray-100" onChange={handleChange} required></textarea>
-            <button type="submit" className="w-full bg-black text-white p-3 rounded-lg">Submit</button>
+            <button type="submit" className="w-full bg-[#2CB2DD] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#1A8CB3]">Submit</button>
           </form>
         </div>
       </div>
@@ -108,3 +108,5 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
+// <button className="">

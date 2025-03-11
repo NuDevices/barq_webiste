@@ -45,7 +45,7 @@ const sections = [
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div className="min-h-screen bg-white text-black font-sans pt-24">
       <Header />
 
       {/* About Header */}
