@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import TypingEffect from "../utils/TypingEffect";
+import TypingEffect from "../Utils/TypingEffect";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 

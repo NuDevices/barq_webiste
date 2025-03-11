@@ -1,4 +1,4 @@
-const StandardSection: React.FC<{ children: React.ReactNode; className?: string; title: string; subtitle?: string }> = ({ children, className = "", title, subtitle }) => {
+const StandardSection: React.FC<{ children: React.ReactNode; className?: string; title: string; subtitle?: string }> = ({ children, title, subtitle }) => {
   return (
     <section className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">{title}</h2>

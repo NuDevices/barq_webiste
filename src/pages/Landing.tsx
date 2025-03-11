@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
-import TypingEffect from "../components/utils/TypingEffect";
+import TypingEffect from "../components/Utils/TypingEffect";
 import productM2 from "../assets/M2.png";
 
 const Landing: React.FC = () => {
