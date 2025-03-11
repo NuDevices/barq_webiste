@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import StandardSection from "../components/Wrappers/StandardSection.tsx";
 
 // Product Images
-import productV2 from "../assets/FPGA.png";
+import productV2 from "../assets/fpga.png";
 import productV20 from "../assets/Chip.png";
 import productM2 from "../assets/M2.png";
 import productPcie from "../assets/PCIe.png";

@@ -8,7 +8,7 @@ import camera from "../assets/SmartVision.jpeg";
 import drone from "../assets/Drones.png";
 import robot from "../assets/Industrial.png";
 import retail from "../assets/SmartRetail.jpeg";
-import government from "../assets/Govsec.png";
+import government from "../assets/govsec.png";
 import automotive from "../assets/Automotive.jpeg";
 
 const Applications: React.FC = () => {
