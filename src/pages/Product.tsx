@@ -4,20 +4,18 @@ import Footer from "../components/Footer.tsx";
 import { Link } from "react-router-dom";
 import StandardSection from "../components/Wrappers/StandardSection.tsx";
 
-
 // Product Images
 import productV2 from "../assets/FPGA.png";
 import productV20 from "../assets/Chip.png";
 import productM2 from "../assets/M2.png";
 import productPcie from "../assets/PCIe.png";
 
-// Image size settings (uniform tile sizing)
 const Products: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans pt-24">
+    <div className="min-h-screen bg-white text-black font-sans pt-20">
       <Header />
-    <StandardSection title="Products" subtitle="NudgeV AI Vision Acceleration Hardware">
-        <div className="space-y-8">
+      <StandardSection title="Products" subtitle="NudgeV AI Vision Acceleration Hardware">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {[
             {
               img: productV2,
@@ -48,18 +46,20 @@ const Products: React.FC = () => {
               button2: "Learn more",
             },
           ].map((product, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center bg-white p-10 rounded-2xl shadow-2xl border border-gray-400">
-              <img src={product.img} alt={product.title} className="w-64 h-64 object-contain rounded-lg md:mr-12 mb-8 md:mb-0" />
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-4xl font-semibold mb-4">{product.title}</h3>
-                <p className="text-2xl text-gray-600">{product.desc}</p>
-                <div className="mt-8 flex justify-center md:justify-start space-x-8">
+            <div key={index} className="flex flex-col items-center bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-300 transition-transform transform hover:scale-105 w-full sm:w-[90%] md:w-[80%] lg:w-[75%] mx-auto">
+              <img src={product.img} alt={product.title} className="w-32 sm:w-40 md:w-48 lg:w-56 h-32 sm:h-40 md:h-48 lg:h-56 object-contain rounded-lg mb-4" />
+              <div className="text-center">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">{product.title}</h3>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600">{product.desc}</p>
+                <div className="mt-6 flex flex-wrap justify-center gap-4">
                   <Link to="/contact">
-                    <button className="bg-[#2CB2DD] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#1A8CB3]">{product.button1}</button>
+                    <button className="bg-[#2CB2DD] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-[#1A8CB3] transition-all w-auto">{product.button1}</button>
                   </Link>
                   <button 
-                  onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
-                  className="border border-gray-400 px-6 py-3 rounded-lg text-lg hover:bg-gray-200">{product.button2}
+                    onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
+                    className="border border-gray-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-200 transition-all w-auto"
+                  >
+                    {product.button2}
                   </button>
                 </div>
               </div>
@@ -67,7 +67,6 @@ const Products: React.FC = () => {
           ))}
         </div>
       </StandardSection>
-
       <Footer />
     </div>
   );

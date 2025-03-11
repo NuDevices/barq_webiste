@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
 
             <div>
               <p className="text-gray-700 font-medium mb-2">Interested in</p>
-              {["NUDGEV V-2 PCIe FPGA Starter Kit", "NUDGEV V-20 AI Edge Chip-on-board", "NUDGEV V-20 M.2 AI Edge accelerator module", "NUDGEV V-20 PCIe AI Accelerator card"].map((option) => (
+              {["BARQ V-2 PCIe FPGA Starter Kit", "BARQ V-20 AI Chip-on-board", "BARQ V-20 M.2 AI module", "BARQ V-20 PCIe AI card"].map((option) => (
                 <label key={option} className="flex items-center space-x-3">
                   <input type="checkbox" value={option} className="form-checkbox h-5 w-5 text-black" onChange={handleChange} />
                   <span>{option}</span>

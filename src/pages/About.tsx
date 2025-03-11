@@ -45,37 +45,34 @@ const sections = [
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans pt-24">
+    <div className="min-h-screen bg-white text-black font-sans pt-32">
       <Header />
 
       {/* About Header */}
-      <section className="container mx-auto px-6 md:px-12 lg:px-20 py-20">
-        <h2 className="text-8xl font-bold text-center mb-6">About</h2>
-        <p className="text-4xl text-gray-600 text-center mb-12">
+      <section className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About</h2>
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8">
           Barqing the Future of AI Inference
         </p>
       </section>
 
       {/* About Content */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 space-y-20">
-        {sections.map((section, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-center gap-12 ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            <img
-              src={section.image}
-              alt={section.title}
-              className="w-full md:w-1/2 h-80 object-cover rounded-lg shadow-lg"
-            />
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-semibold mb-4">{section.title}</h2>
-              <p className="text-2xl text-gray-600">{section.description}</p>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+          {sections.map((section, index) => (
+            <div key={index} className="flex flex-col items-center text-center sm:text-left w-full">
+              <div className="w-full flex justify-center">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mt-4">{section.title}</h2>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-2">{section.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <Footer />
