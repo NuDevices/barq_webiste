@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import SuperHeroSection from "../components/Wrappers/SuperHeroSection";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+import TypingEffect from "../components/utils/TypingEffect";
 import productM2 from "../assets/M2.png";
 
 const Landing: React.FC = () => {
   useEffect(() => {
     document.title = "BARQTECH | AI Acceleration Hardware";
+    AOS.init({ duration: 1200 });
   }, []);
 
   return (
@@ -17,19 +20,18 @@ const Landing: React.FC = () => {
       {/* ✅ Prevent Header Overlap */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center">
         {/* ✅ Fix Title Responsiveness */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 data-aos="fade-right" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           The Fastest AI Vision Accelerator
         </h1>
 
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-4">
-          Redefining AI Vision Processing for the Edge
-        </p>
+        <TypingEffect />
 
         {/* ✅ Responsive Image */}
         <img 
           src={productM2} 
           alt="BARQTECH AI Accelerator" 
           className="w-56 sm:w-64 md:w-80 lg:w-96 h-auto mx-auto object-contain mt-6"
+          data-aos="fade-left"
         />
 
         {/* ✅ Icons */}
@@ -47,7 +49,7 @@ const Landing: React.FC = () => {
             </button>
           </Link>
           <Link to="/contact">
-            <button className="border border-gray-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-200  w-full sm:w-auto">
+            <button className="border border-gray-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-200 w-full sm:w-auto">
               Get in Touch
             </button>
           </Link>
