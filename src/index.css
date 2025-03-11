@@ -27,3 +27,18 @@
     @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-900 cursor-pointer transition-colors hover:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/50;
   }
 }
+
+@keyframes floating {
+  0% { transform: translateY(0px); opacity: 0.6; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.6; }
+}
+
+.floating-dots {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.1); /* Light opacity */
+  border-radius: 50%;
+  animation: floating 3s infinite ease-in-out;
+}
