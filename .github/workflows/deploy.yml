@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '.github/**'
 
 jobs:
   deploy:
@@ -24,7 +22,7 @@ jobs:
 
       - name: Deploy via SSH
         run: |
-          ssh user@your.server.ip << 'EOF'
+          ssh debian@barqtech.ae << 'EOF'
             set -e  # Stop execution if any command fails
             
             echo "Pulling latest code..."
