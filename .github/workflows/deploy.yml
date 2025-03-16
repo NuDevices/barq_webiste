@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '.github/**'
 
 jobs:
   deploy:
@@ -20,7 +18,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.PROD_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H your.server.ip >> ~/.ssh/known_hosts
+          ssh-keyscan -H barqtech.ae >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
         run: |
