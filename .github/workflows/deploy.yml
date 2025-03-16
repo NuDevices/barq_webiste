@@ -1,0 +1,46 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H your.server.ip >> ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        run: |
+          ssh user@your.server.ip << 'EOF'
+            set -e  # Stop execution if any command fails
+            
+            echo "Pulling latest code..."
+            cd /home/debian/nudevices-site-light
+            git pull origin main
+            
+            echo "Building Docker image..."
+            COMMIT_HASH=$(git rev-parse --short HEAD)  # Get short commit hash
+            sudo docker build -t registry.nudevices.ai/website/website:$COMMIT_HASH .
+            
+            echo "Tagging latest image..."
+            sudo docker tag registry.nudevices.ai/website/website:$COMMIT_HASH registry.nudevices.ai/website/website:latest
+            
+            echo "Deploying with docker compose..."
+            cd /opt/services/nudgesite
+            sudo docker compose up -d
+            
+            echo "Deployment completed successfully!"
+          EOF
