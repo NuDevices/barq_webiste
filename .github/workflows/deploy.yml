@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   deploy:
@@ -27,7 +29,7 @@ jobs:
             
             echo "Pulling latest code..."
             cd /home/debian/nudevices-site-light
-            git pull origin main
+            sudo git pull origin main
             
             echo "Building Docker image..."
             COMMIT_HASH=$(git rev-parse --short HEAD)  # Get short commit hash
