@@ -2,43 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Stili personalizzati base */
 @layer base {
   :root {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   body {
+    @apply bg-white;
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #111827, #212529);
     overflow-x: hidden;
-    /* Aggiunto questa riga */
   }
 }
 
-/* Stili componenti personalizzati */
 @layer components {
-  .custom-button {
-    @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-900 cursor-pointer transition-colors hover:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/50;
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-xl font-medium 
+           hover:bg-primary-dark transition-all duration-300 
+           shadow-md hover:shadow-lg transform hover:-translate-y-0.5
+           text-lg;
   }
+
+  .btn-secondary {
+    @apply border-2 border-gray-200 px-8 py-4 rounded-xl font-medium 
+           hover:bg-gray-50 transition-all duration-300 
+           shadow-sm hover:shadow-md transform hover:-translate-y-0.5
+           text-lg text-gray-700;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-soft border border-gray-100 
+           transition-all duration-300 hover:shadow-lg 
+           transform hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 
+           leading-tight tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-xl sm:text-2xl text-gray-600 mt-4 max-w-3xl mx-auto;
+  }
+}
+
+.floating-dots {
+  @apply absolute w-3 h-3 rounded-full bg-primary/10;
+  animation: floating 3s infinite ease-in-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/70 backdrop-blur-lg;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
 }
 
 @keyframes floating {
   0% { transform: translateY(0px); opacity: 0.6; }
   50% { transform: translateY(-10px); opacity: 1; }
   100% { transform: translateY(0px); opacity: 0.6; }
-}
-
-.floating-dots {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.1); /* Light opacity */
-  border-radius: 50%;
-  animation: floating 3s infinite ease-in-out;
 }

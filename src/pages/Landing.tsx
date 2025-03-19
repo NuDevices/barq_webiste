@@ -14,47 +14,117 @@ const Landing: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div className="min-h-screen bg-white">
       <Header />
 
-      {/* ✅ Prevent Header Overlap */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center">
-        {/* ✅ Fix Title Responsiveness */}
-        <h1 data-aos="fade-right" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          The Fastest AI Vision Accelerator
-        </h1>
+      {/* Hero Section - Two Column Layout */}
+      <div className="pt-20 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left" data-aos="fade-right">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight gradient-text mb-6">
+                The Fastest AI Vision Accelerator
+              </h1>
+              <TypingEffect />
+            </div>
 
-        <TypingEffect />
-
-        {/* ✅ Responsive Image */}
-        <img 
-          src={productM2} 
-          alt="BARQTECH AI Accelerator" 
-          className="w-56 sm:w-64 md:w-80 lg:w-96 h-auto mx-auto object-contain mt-6"
-          data-aos="fade-left"
-        />
-
-        {/* ✅ Icons */}
-        <div className="flex flex-wrap justify-center gap-3 mt-6 text-gray-500 text-xs sm:text-sm md:text-base">
-          <span>🔬 Advanced AI</span>
-          <span>🚀 Edge Acceleration</span>
-          <span>🇦🇪 Made in UAE</span>
-        </div>
-
-        {/* ✅ CTA Buttons */}
-        <div className="flex flex-wrap justify-center mt-8 gap-4">
-          <Link to="/products">
-            <button className="bg-[#2CB2DD] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-[#1A8CB3] w-full sm:w-auto">
-              Explore Products
-            </button>
-          </Link>
-          <Link to="/contact">
-            <button className="border border-gray-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-200 w-full sm:w-auto">
-              Get in Touch
-            </button>
-          </Link>
+            {/* Right Content - Product Image */}
+            <div data-aos="fade-left">
+              <div className="relative bg-white rounded-3xl p-8 shadow-soft">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#2CB2DD]/10 to-[#1A8CB3]/10 rounded-[2rem] blur-3xl"></div>
+                <div className="relative bg-white rounded-2xl p-8">
+                  <img 
+                    src={productM2} 
+                    alt="BARQTECH AI Accelerator" 
+                    className="w-full max-w-lg mx-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Stats Section - Full Width */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-white rounded-xl shadow-soft">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">20x</div>
+              <div className="text-gray-600">Faster Processing</div>
+            </div>
+            <div className="text-center p-6 bg-white rounded-xl shadow-soft">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">70%</div>
+              <div className="text-gray-600">Less Power</div>
+            </div>
+            <div className="text-center p-6 bg-white rounded-xl shadow-soft">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">3x</div>
+              <div className="text-gray-600">More Efficient</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Why Choose BARQTECH?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Experience the next generation of AI acceleration with our cutting-edge solutions.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Unmatched Performance",
+                description: "Up to 20 TOPS of dedicated AI compute power for edge applications",
+                icon: "⚡"
+              },
+              {
+                title: "Energy Efficient",
+                description: "Best-in-class performance per watt for sustainable AI deployment",
+                icon: "🌱"
+              },
+              {
+                title: "Easy Integration",
+                description: "Multiple form factors supporting various deployment scenarios",
+                icon: "🔌"
+              }
+            ].map((feature, index) => (
+              <div 
+                key={index}
+                className="card p-8 bg-white"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="w-16 h-16 rounded-xl bg-primary-light/10 flex items-center justify-center mb-6 shadow-soft">
+                  <span className="text-2xl">{feature.icon}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link to="/products">
+              <button className="btn-primary">
+                Explore Products
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button className="btn-secondary">
+                Get in Touch
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

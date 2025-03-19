@@ -1,46 +1,49 @@
-// src/services/emailService.ts
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 interface EmailData {
-    name: string;
-    company: string;
-    message: string;
-    email?: string;
-    jobTitle?: string;
-    country?: string;
+  fullName: string;
+  role: string;
+  email: string;
+  phone: string;
+  interest: string[];
+  message: string;
 }
 
-export const sendEmailRequest = async (data: EmailData) => {
-    const apiUrl = "https://api.nudgev.ai/v1/send_waitlist_email/";
-    const payload = {
-        subject: `${data.name} - ${data.company} - Contact Form`,
-        body: data.message,
-        metadata: {
-            name: data.name,
-            email: data.email || `${data.name.replace(/\s+/g, '.')}@${data.company.replace(/\s+/g, '')}.com`,
-            company: data.company,
-            job_title: data.jobTitle || "Not Specified",
-            country: data.country || "Not Specified",
-            message: data.message
-        }
-    };
+export const useEmailService = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = async (data: EmailData) => {
+    setIsLoading(true);
+    setError(null);
+    setSuccess(false);
 
     try {
-        const response = await fetch(apiUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-        });
+      const templateParams = {
+        from_name: data.fullName,
+        role: data.role,
+        from_email: data.email,
+        phone: data.phone,
+        interest: data.interest.join(', '),
+        message: data.message,
+      };
 
-        if (!response.ok) {
-            throw new Error(`Network response was not ok. Status: ${response.status}`);
-        }
+      await emailjs.send(
+        'service_barqtech',  // Your EmailJS service ID
+        'template_contact',  // Your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY'    // Your EmailJS public key
+      );
 
-        return await response.json();
-    } catch (error) {
-        console.error("Error:", error);
-        throw error;
+      setSuccess(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while sending the message');
+    } finally {
+      setIsLoading(false);
     }
-};
+  };
 
-export default sendEmailRequest;
+  return { sendEmail, isLoading, error, success };
+};
