@@ -9,7 +9,7 @@ import productM2 from "../assets/M2.png";
 
 const Landing: React.FC = () => {
   useEffect(() => {
-    document.title = "BARQTECH | AI Acceleration Hardware";
+    document.title = "BARQ | AI Acceleration Hardware";
     AOS.init({ duration: 1200 });
   }, []);
 
@@ -36,7 +36,7 @@ const Landing: React.FC = () => {
                 <div className="relative bg-white rounded-2xl p-8">
                   <img 
                     src={productM2} 
-                    alt="BARQTECH AI Accelerator" 
+                    alt="BARQ AI Accelerator" 
                     className="w-full max-w-lg mx-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -70,7 +70,7 @@ const Landing: React.FC = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Why Choose BARQTECH?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Why Choose BARQ?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Experience the next generation of AI acceleration with our cutting-edge solutions.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

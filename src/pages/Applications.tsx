@@ -2,6 +2,11 @@ import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import placeholder from "../assets/placeholder.jpg";
+import hazzon from "../assets/hazzone.png";
+import defdet from "../assets/defdet.png";
+import detlea from "../assets/detlea.png";
+
+
 
 const Applications: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("Show all");
@@ -137,7 +142,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone"],
       industries: ["Industrial Automation"],
       popularity: "High",
-      image: placeholder
+      image: detlea
     },
     {
       title: "Hazardous Zone Identification",
@@ -145,7 +150,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone"],
       industries: ["Industrial Automation", "Safety"],
       popularity: "Medium",
-      image: placeholder
+      image: hazzon
     },
     {
       title: "Defect Detection",
@@ -153,7 +158,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Industrial Automation"],
       popularity: "High",
-      image: placeholder
+      image: defdet
     },
     {
       title: "Analog Instrument Reading",

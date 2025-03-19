@@ -25,7 +25,7 @@ const Products: React.FC = () => {
             "Development Tools Included",
             "Pre-synthesized AI IP"
           ],
-          price: "$1,000",
+          price: "$999",
           availability: { status: "available", label: "Available Now" },
           button1: "Order Now",
           button2: "Learn More",
@@ -36,7 +36,7 @@ const Products: React.FC = () => {
           desc: "A compact chip-on-board solution for embedded AI acceleration featuring 2 TOPS, perfect for IoT devices and edge computing applications. Build smarter with BARQ",
           specs: [
             "2 TOPS AI Compute",
-            "3W Power Consumption",
+            "<1W Power Consumption",
             "Compact Form Factor",
             "Edge-optimized Architecture"
           ],
@@ -70,7 +70,7 @@ const Products: React.FC = () => {
           desc: "A versatile M.2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs. Accelerate with BARQ",
           specs: [
             "20 TOPS AI Compute",
-            "M.2 2280 Form Factor",
+            "M.2 22x80 Form Factor",
             "PCIe Gen3 x4 Interface",
             "Plug-and-Play Design"
           ],

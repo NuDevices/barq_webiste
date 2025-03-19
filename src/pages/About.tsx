@@ -19,10 +19,10 @@ const About: React.FC = () => {
     {
       year: "2025",
       title: "Foundation",
-      description: "BARQTECH was established in Dubai, UAE"
+      description: "BARQ was established in Dubai, UAE"
     },
     {
-      year: "2025 Q2",
+      year: "2025 Q1",
       title: "First Product",
       description: "Launch of BARQ V-2 FPGA Starter Kit"
     },
@@ -40,10 +40,10 @@ const About: React.FC = () => {
 
   // Team stats
   const teamStats = [
-    { value: "30+", label: "Team Members" },
-    { value: "12", label: "Countries" },
-    { value: "15+", label: "Patents" },
-    { value: "50+", label: "Research Papers" }
+    { value: "15+", label: "Team Members" },
+    { value: "4+", label: "Countries" },
+    { value: "6+", label: "Patents" },
+    { value: "25+", label: "Research Papers" }
   ];
 
   // Core values
@@ -78,7 +78,7 @@ const About: React.FC = () => {
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark">
-            About BARQTECH
+            About BARQ
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pioneering the future of AI acceleration with cutting-edge hardware solutions
@@ -97,7 +97,7 @@ const About: React.FC = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
                 <p className="text-lg text-gray-600">
-                  A world where AI helps humanity live longer, safer, healthier, and more fulfilling lives—enabling 
+                  BARQ envisage AI to help humanity live longer, safer, healthier, and more fulfilling lives—enabling 
                   progress that feels effortless, equitable, and everywhere.
                 </p>
               </div>
@@ -171,7 +171,7 @@ const About: React.FC = () => {
             <div data-aos="fade-right">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Team</h2>
               <p className="text-lg text-gray-600 mb-8">
-                BARQTECH brings together world-class experts in AI, hardware design, and business strategy. 
+                BARQ is a UAE based-tech startup bringing together world-class experts in AI, hardware design, and business strategy. 
                 Our diverse team is united by a shared vision of transforming the future of AI acceleration.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -200,7 +200,7 @@ const About: React.FC = () => {
             <div data-aos="fade-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Technology</h2>
               <p className="text-lg text-gray-600 mb-8">
-                BARQTECH's cutting-edge AI accelerators leverage the latest in hardware-optimized deep learning 
+                BARQ's cutting-edge AI accelerators leverage the latest in hardware-optimized deep learning 
                 to provide unmatched performance, efficiency, and scalability for edge applications.
               </p>
               <ul className="space-y-4">

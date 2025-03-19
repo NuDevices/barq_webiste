@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 const slogans = [
   "Redefining AI Vision Processing",
   "Edge AI, Smarter and Faster",
-  "Optimized Performance, Unmatched Efficiency",
   "BARQTECH - AI Without Limits",
-  "Unmatched AI Vision Performance for Edge Applications"
+  "Unmatched AI Vision Performance"
 ];
 
 const TypingEffect = () => {
