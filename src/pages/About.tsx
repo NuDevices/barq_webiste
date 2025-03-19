@@ -5,9 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import Images
-import OurStory from "../assets/ourstory.jpg";
 import OurVision from "../assets/ourvision.png";
-import OurMission from "../assets/ourmission.png";
 import OurTeam from "../assets/ourteam.jpg";
 import OurTechnology from "../assets/ourtech.jpg";
 
