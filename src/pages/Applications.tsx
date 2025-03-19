@@ -1,12 +1,43 @@
 import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import placeholder from "../assets/placeholder.jpg";
 import hazzon from "../assets/hazzone.png";
 import defdet from "../assets/defdet.png";
+import anarea from "../assets/anarea.png";
+import prodet from "../assets/prodet.png";
+import anpr from "../assets/anpr.png";
+import ergana from "../assets/ergana.png";
+import objcou from "../assets/objcou.png";
+import eyegaz from "../assets/eyegaz.png";
+import abaobjdet from "../assets/abaobjdet.png";
+import safmon from "../assets/safmon.png";
+import emodet from "../assets/emodet.png";
+import facrec from "../assets/facrec.png";
+import weadet from "../assets/weadet.png";
+import stoveidet from "../assets/stoveidet.png";
+import objtra from "../assets/objtra.png";
+import faldet from "../assets/faldet.png";
+import posrec from "../assets/posrec.png";
+import heamap from "../assets/heamap.png";
+import intdet from "../assets/intdet.png";
+import parlot from "../assets/parlot.png";
+import peocou from "../assets/peocou.png";
+import drosur from "../assets/drosur.png";
+import comcon from "../assets/comcon.png";
+import perpro from "../assets/perpro.png";
+import batana from "../assets/batana.png";
+import expdet from "../assets/expdet.png";
+import atr from "../assets/atr.png";
+import snigla from "../assets/snigla.png";
+import stressdet from "../assets/stressdet.png";
+import leakdet from "../assets/leakdet.png";
+import pallog from "../assets/pallog.png";
+import fleetmon from "../assets/fleetmon.png";
+import undwat from "../assets/undwat.png";
+import marine from "../assets/marine.png";
+import attall from "../assets/attall.png";
 import detlea from "../assets/detlea.png";
-
-
+import placeholder from "../assets/placeholder.jpg";
 
 const Applications: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("Show all");
@@ -166,7 +197,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Industrial Automation"],
       popularity: "Medium",
-      image: placeholder
+      image: anarea
     },
     {
       title: "Product Detection",
@@ -174,7 +205,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Retail", "Manufacturing"],
       popularity: "High",
-      image: placeholder
+      image: prodet
     },
     {
       title: "Automatic Number Plate Recognition",
@@ -182,7 +213,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Transportation", "Security"],
       popularity: "High",
-      image: placeholder
+      image: anpr
     },
     {
       title: "Ergonomic Risk Analysis",
@@ -190,7 +221,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Safety", "Healthcare"],
       popularity: "Medium",
-      image: placeholder
+      image: ergana
     },
     {
       title: "Object Counting",
@@ -198,7 +229,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Industrial Automation"],
       popularity: "Medium",
-      image: placeholder
+      image: objcou
     },
     {
       title: "Eye Gaze Detection",
@@ -206,7 +237,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Retail", "Healthcare"],
       popularity: "Low",
-      image: placeholder
+      image: eyegaz
     },
     {
       title: "Abandoned Objects Detection",
@@ -214,7 +245,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Security", "Safety"],
       popularity: "Medium",
-      image: placeholder
+      image: abaobjdet
     },
     {
       title: "Personal Protective Equipment Detection",
@@ -222,7 +253,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Safety", "Industrial Automation"],
       popularity: "High",
-      image: placeholder
+      image: safmon
     },
     {
       title: "Facial Emotion Analysis",
@@ -230,7 +261,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Retail", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: emodet
     },
     {
       title: "Face Recognition",
@@ -238,15 +269,15 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Security", "Safety"],
       popularity: "High",
-      image: placeholder
+      image: facrec
     },
     {
       title: "Weapon Detection",
       description: "Automatically detect weapons in real-time video streams.",
-      devices: ["Camera"],
+      devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "High",
-      image: placeholder
+      image: weadet
     },
     {
       title: "Detect Stopping Vehicles",
@@ -254,15 +285,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Cities", "Logistics"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Vehicle Dwell Time",
-      description: "Monitor the time vehicles spend at scheduled stops without moving to increase efficiency.",
-      devices: ["Camera"],
-      industries: ["Transportation", "Logistics"],
-      popularity: "Medium",
-      image: placeholder
+      image: stoveidet
     },
     {
       title: "Customer Behavior Analysis",
@@ -270,7 +293,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Retail"],
       popularity: "Medium",
-      image: placeholder
+      image: objtra
     },
     {
       title: "Fall Detection",
@@ -278,7 +301,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Healthcare", "Safety"],
       popularity: "Medium",
-      image: placeholder
+      image: faldet
     },
     {
       title: "Posture Recognition",
@@ -286,15 +309,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Healthcare", "Safety"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Social Distancing Monitoring",
-      description: "Monitor social distancing between people, identify high-risk areas and non-compliance.",
-      devices: ["Camera"],
-      industries: ["Healthcare", "Safety"],
-      popularity: "Low",
-      image: placeholder
+      image: posrec
     },
     {
       title: "Movement Heat Maps",
@@ -302,31 +317,15 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Retail", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: heamap
     },
     {
       title: "Intrusion Detection",
       description: "Detect intrusion events in pre-defined areas by identifying the target's position, date and time.",
-      devices: ["Camera"],
-      industries: ["Security", "Military"],
+      devices: ["Camera", "Drone", "Satellite"],
+      industries: ["Security", "Defence"],
       popularity: "High",
-      image: placeholder
-    },
-    {
-      title: "Parking Lot Occupancy",
-      description: "Complete application to detect vehicles with Computer Vision and Deep Learning.",
-      devices: ["Camera"],
-      industries: ["Smart Cities"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Vehicle Counting",
-      description: "Detect and count different types of vehicles for traffic analysis.",
-      devices: ["Camera"],
-      industries: ["Smart Cities"],
-      popularity: "High",
-      image: placeholder
+      image: intdet
     },
     {
       title: "Occupancy Detection",
@@ -334,15 +333,7 @@ const Applications: React.FC = () => {
       devices: ["Camera"],
       industries: ["Smart Cities"],
       popularity: "High",
-      image: placeholder
-    },
-    {
-      title: "Animal Monitoring",
-      description: "Deep learning for vision-based animal monitoring to increase productivity in farming.",
-      devices: ["Camera"],
-      industries: ["Agriculture"],
-      popularity: "Medium",
-      image: placeholder
+      image: parlot
     },
     {
       title: "People Counting",
@@ -350,15 +341,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone"],
       industries: ["Smart Retail", "Security"],
       popularity: "High",
-      image: placeholder
-    },
-    {
-      title: "Intrusion Detection in High-Security Zones",
-      description: "Detect unauthorized access in military zones in real-time.",
-      devices: ["Camera", "Drone", "Satellite"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: peocou
     },
     {
       title: "Automated Drone Surveillance",
@@ -366,7 +349,7 @@ const Applications: React.FC = () => {
       devices: ["Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: drosur
     },
     {
       title: "Camouflage & Concealment Detection",
@@ -374,7 +357,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Satellite"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: comcon
     },
     {
       title: "Border and Perimeter Monitoring",
@@ -382,15 +365,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone", "Satellite"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Covert Movement Detection",
-      description: "Detect slow or stealthy movements in restricted areas.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: perpro
     },
     {
       title: "Real-Time Battlefield Analysis",
@@ -398,15 +373,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone", "Satellite"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Weapon Detection in Crowds",
-      description: "Automatically detect weapons in public or sensitive areas.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: batana
     },
     {
       title: "Explosive and IED Detection",
@@ -414,23 +381,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Firearm Discharge Detection",
-      description: "Detect and alert for gunfire or explosions using AI vision.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Vehicle Anomaly Detection",
-      description: "Monitor and detect unauthorized or suspicious vehicle movements.",
-      devices: ["Camera", "Drone", "Satellite"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: expdet
     },
     {
       title: "Automated Target Recognition (ATR)",
@@ -438,7 +389,7 @@ const Applications: React.FC = () => {
       devices: ["Drone", "Satellite", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: atr
     },
     {
       title: "Enemy Sniper & Spotter Detection",
@@ -446,39 +397,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Robotic Reconnaissance Units",
-      description: "AI-powered robotic scouts for urban and battlefield surveillance.",
-      devices: ["Autonomous Robot", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Tactical Gesture Recognition",
-      description: "Recognize military hand signals for silent communication.",
-      devices: ["Camera", "Wearable"],
-      industries: ["Defence"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Low-Light & Infrared Threat Detection",
-      description: "Enhance visibility using thermal imaging for night operations.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Aircraft & Drone Identification",
-      description: "Identify friendly and enemy aircraft or UAVs in real-time.",
-      devices: ["Radar", "Satellite", "Camera"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: snigla
     },
     {
       title: "Fatigue & Stress Detection for Soldiers",
@@ -486,31 +405,7 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Wearable"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "AI-Assisted Load Carrying Monitoring",
-      description: "Track posture and movement to prevent overexertion injuries.",
-      devices: ["Wearable", "Camera"],
-      industries: ["Manufacturing", "Logistics", "Safety"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Personal Protective Gear Compliance",
-      description: "Ensure soldiers wear proper gear and armor for protection.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Automated First Aid Assessment",
-      description: "Detect injured personnel and prioritize medical response.",
-      devices: ["Camera", "Wearable", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: stressdet
     },
     {
       title: "Chemical and Biohazard Leak Detection",
@@ -518,23 +413,15 @@ const Applications: React.FC = () => {
       devices: ["Camera", "Drone", "Wearable"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: leakdet
     },
     {
       title: "Supply Chain Monitoring",
       description: "AI-based monitoring of logistics, supply lines, and inventory.",
-      devices: ["Camera", "RFID", "Drone"],
+      devices: ["Camera", "Drone"],
       industries: ["Manufacturing", "Logistics"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Secure Armory & Weapon Storage Monitoring",
-      description: "Detect unauthorized access to armories and weapon depots.",
-      devices: ["Camera", "Sensor"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: pallog
     },
     {
       title: "Fleet & Convoy Monitoring",
@@ -542,15 +429,7 @@ const Applications: React.FC = () => {
       devices: ["Drone", "Camera", "Satellite"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Fuel Theft Detection",
-      description: "Monitor fuel storage sites to detect unauthorized usage or theft.",
-      devices: ["Camera", "Sensor", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
+      image: fleetmon
     },
     {
       title: "Unmanned Submarine Surveillance",
@@ -558,7 +437,7 @@ const Applications: React.FC = () => {
       devices: ["Autonomous Submarine", "Underwater Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: undwat
     },
     {
       title: "Maritime Anomaly Detection",
@@ -566,31 +445,15 @@ const Applications: React.FC = () => {
       devices: ["Satellite", "Drone", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: marine
     },
     {
-      title: "Drone Swarm Coordination",
-      description: "Use AI to coordinate multiple drones for tactical operations.",
-      devices: ["Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Missile Launch Detection",
-      description: "Detect missile launches and provide early warning alerts.",
-      devices: ["Satellite", "Radar"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: placeholder
-    },
-    {
-      title: "Pilot Attention & Fatigue Monitoring",
+      title: "Attention & Fatigue Monitoring",
       description: "Monitor pilots' cognitive load to prevent fatigue-related errors.",
       devices: ["Wearable", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
-      image: placeholder
+      image: attall
     }
   ];
 
@@ -825,3 +688,5 @@ const Applications: React.FC = () => {
 };
 
 export default Applications;
+
+export default Applications
