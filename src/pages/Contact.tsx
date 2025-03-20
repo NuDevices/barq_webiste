@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Chip from "../assets/Chip.png";
-import emailjs from '@emailjs/browser';
+import { sendEmailRequest } from "../services/EmailService";
 
 const Contact: React.FC = () => {
-  useEffect(() => {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Initialize EmailJS with your public key
-  }, []);
-
   const [formData, setFormData] = useState({
     fullName: "",
     role: "",
@@ -51,20 +47,14 @@ const Contact: React.FC = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const templateParams = {
-        from_name: formData.fullName,
+      await sendEmailRequest({
+        fullName: formData.fullName,
         role: formData.role,
-        from_email: formData.email,
+        email: formData.email,
         phone: formData.phone,
-        interest: formData.interest.join(', '),
+        interest: formData.interest,
         message: formData.message,
-      };
-
-      await emailjs.send(
-        'service_barqtech',  // Your EmailJS service ID
-        'template_contact',  // Your EmailJS template ID
-        templateParams
-      );
+      });
 
       setSubmitStatus({
         type: 'success',
@@ -226,11 +216,10 @@ const Contact: React.FC = () => {
               </div>
 
               {submitStatus.type && (
-                <div className={`p-4 rounded-lg ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-green-50 text-green-800' 
-                    : 'bg-red-50 text-red-800'
-                }`}>
+                <div className={`p-4 rounded-lg ${submitStatus.type === 'success'
+                  ? 'bg-green-50 text-green-800'
+                  : 'bg-red-50 text-red-800'
+                  }`}>
                   {submitStatus.message}
                 </div>
               )}
