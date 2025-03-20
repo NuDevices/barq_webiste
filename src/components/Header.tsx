@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/logobow.png";
+import Logo from "../assets/logobot.png";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <img 
             src={Logo}
             alt="BARQTECH" 
-            className="h-12 w-auto"
+            className="h-16 w-auto" // Increased size from h-12 to h-16
           />
         </Link>
 

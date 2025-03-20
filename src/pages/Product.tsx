@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 // Product Images
 import productV2 from "../assets/fpga.png";
+import productcv2 from "../assets/cv2.png";
 import productV20 from "../assets/Chip.png";
 import productM2 from "../assets/M2.png";
 import productPcie from "../assets/PCIe.png";
@@ -31,7 +32,7 @@ const Products: React.FC = () => {
           button2: "Learn More",
         },
         {
-          img: productV20,
+          img: productcv2,
           title: "BARQ V-2 AI Edge Chip-on-board",
           desc: "A compact chip-on-board solution for embedded AI acceleration featuring 2 TOPS, perfect for IoT devices and edge computing applications. Build smarter with BARQ",
           specs: [
