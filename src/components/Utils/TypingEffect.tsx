@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const slogans = [
   "Redefining AI Vision Processing",
   "Edge AI, Smarter and Faster",
-  "BARQTECH - AI Without Limits",
+  "BARQ - AI Without Limits",
   "Unmatched AI Vision Performance"
 ];
 

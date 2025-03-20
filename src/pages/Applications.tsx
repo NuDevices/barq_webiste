@@ -37,7 +37,18 @@ import undwat from "../assets/undwat.png";
 import marine from "../assets/marine.png";
 import attall from "../assets/attall.png";
 import detlea from "../assets/detlea.png";
-import placeholder from "../assets/placeholder.jpg";
+
+import smartcities from "../assets/smartcities.jpeg";
+import safety from "../assets/safety.png";
+import defence from "../assets/defence.jpeg";
+import industrial from "../assets/industrial.jpeg";
+import smartretail from "../assets/SmartRetail.jpeg";
+import security from "../assets/security.jpeg";
+
+import wearablez from "../assets/wearablez.jpg";
+import cameraz from "../assets/cameraz.jpg";
+import dronez from "../assets/dronez.jpg";
+
 
 const Applications: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("Show all");
@@ -69,74 +80,62 @@ const Applications: React.FC = () => {
   // Industry applications data - only showing industries that have use cases
   const industryApplications = [
     {
-      img: placeholder,
-      title: "Industrial Automation",
-      desc: "Address industrial challenges and improve performance of critical applications by 8-10x. Automate with BARQ",
-      filter: "Industrial Automation"
+      img: industrial,
+      title: "Industrial & Logistics",
+      desc: "Increase operational efficiency by 8x, reduce downtime by 70%, enhance supply chain visibility by 90%. Power industry with BARQ.",
+      filter: "Industrial & Logistics"
     },
     {
-      img: placeholder,
-      title: "Defence & Security",
+      img: defence,
+      title: "Defence",
       desc: "Reduce decision latency by 80%, improve threat detection by 3x, cut operational costs by 40%. Future proofing with BARQ",
       filter: "Defence"
     },
     {
-      img: placeholder,
+      img: security,
+      title: "Security",
+      desc: "Enhance threat detection by 3x, reduce response time by 70%, improve situational awareness by 90%. Secure better with BARQ.",
+      filter: "Security"
+    },
+    {
+      img: smartcities,
       title: "Smart Cities",
       desc: "Enhance urban operations by 2x, reduce power usage by 60%, improve real-time monitoring by 95%. Build smarter cities with BARQ",
       filter: "Smart Cities"
     },
     {
-      img: placeholder,
-      title: "Healthcare & Safety",
+      img: safety,
+      title: "Safety",
       desc: "Improve patient monitoring by 3x, reduce response time by 70%, enhance safety compliance by 85%. Care better with BARQ",
-      filter: "Healthcare"
+      filter: "Safety"
     },
     {
-      img: placeholder,
+      img: smartretail,
       title: "Smart Retail",
       desc: "Improve model accuracy by 20%. Boost revenue, reduce costs, improve in-store CX. 10X in-store CX with BARQ",
       filter: "Smart Retail"
-    },
-    {
-      img: placeholder,
-      title: "Manufacturing & Logistics",
-      desc: "Optimize operations by 4x, reduce errors by 40%, improve tracking accuracy by 99%. Move smarter with BARQ",
-      filter: "Manufacturing"
     }
   ];
 
   // Device applications data - only showing devices from CSV
   const deviceApplications = [
     {
-      img: placeholder,
+      img: cameraz,
       title: "Cameras",
       desc: "Reduce latency by 80%, increase detection accuracy by 3x, lower power consumption by 70%. Smarter cameras with BARQ",
       filter: "Camera"
     },
     {
-      img: placeholder,
+      img: dronez,
       title: "Drones",
       desc: "Get >2x the flight time, capture 4K images, Improve >5x AI accuracy, Decrease weight by 50%. Build the best drones with BARQ",
       filter: "Drone"
     },
     {
-      img: placeholder,
-      title: "Satellites",
-      desc: "Enhance processing speed by 5x, extend coverage by 3x, improve real-time analytics by 90%. See further with BARQ",
-      filter: "Satellite"
-    },
-    {
-      img: placeholder,
+      img: wearablez,
       title: "Wearables",
       desc: "Boost decision making by 4x, reduce power usage by 65%, improve response time by 95%. Wear smarter with BARQ",
       filter: "Wearable"
-    },
-    {
-      img: placeholder,
-      title: "Autonomous Robots",
-      desc: "Accelerate AI processing by 10x, cut power consumption by 80%, enhance real-time performance by 95%. Build better robots with BARQ",
-      filter: "Autonomous Robot"
     }
   ];
 
@@ -145,25 +144,17 @@ const Applications: React.FC = () => {
     "Show all",
     "Camera",
     "Drone",
-    "Satellite",
-    "Wearable", 
-    "Autonomous Robot",
-    "Autonomous Submarine"
+    "Wearable"
   ];
 
   const industries = [
     "Show all",
-    "Industrial Automation",
+    "Industrial & Logistics",
     "Safety",
     "Smart Retail",
-    "Manufacturing",
     "Defence",
     "Security", 
-    "Healthcare",
-    "Transportation",
-    "Smart Cities",
-    "Agriculture",
-    "Logistics"
+    "Smart Cities"
   ];
 
   const allUseCases = [
@@ -171,7 +162,7 @@ const Applications: React.FC = () => {
       title: "Predictive Maintenance of Machinery",
       description: "Employ computer Vision for predictive maintenance on heavy machinery with high accuracy.",
       devices: ["Camera", "Drone"],
-      industries: ["Industrial Automation"],
+      industries: ["Industrial & Logistics"],
       popularity: "High",
       image: detlea
     },
@@ -179,7 +170,7 @@ const Applications: React.FC = () => {
       title: "Hazardous Zone Identification",
       description: "Computer vision systems on worksites can enhance safety by monitoring behavior around restricted areas and hazardous zones in real time.",
       devices: ["Camera", "Drone"],
-      industries: ["Industrial Automation", "Safety"],
+      industries: ["Industrial & Logistics", "Safety"],
       popularity: "Medium",
       image: hazzon
     },
@@ -187,7 +178,7 @@ const Applications: React.FC = () => {
       title: "Defect Detection",
       description: "Automating traditionally manual and time-consuming defect detection.",
       devices: ["Camera"],
-      industries: ["Industrial Automation"],
+      industries: ["Industrial & Logistics"],
       popularity: "High",
       image: defdet
     },
@@ -195,7 +186,7 @@ const Applications: React.FC = () => {
       title: "Analog Instrument Reading",
       description: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
       devices: ["Camera"],
-      industries: ["Industrial Automation"],
+      industries: ["Industrial & Logistics"],
       popularity: "Medium",
       image: anarea
     },
@@ -203,7 +194,7 @@ const Applications: React.FC = () => {
       title: "Product Detection",
       description: "Product detection uses deep learning to detect different product types automatically.",
       devices: ["Camera"],
-      industries: ["Smart Retail", "Manufacturing"],
+      industries: ["Smart Retail", "Industrial & Logistics"],
       popularity: "High",
       image: prodet
     },
@@ -211,7 +202,7 @@ const Applications: React.FC = () => {
       title: "Automatic Number Plate Recognition",
       description: "Automated Number Plate Recognition to identify vehicles in real-time.",
       devices: ["Camera"],
-      industries: ["Transportation", "Security"],
+      industries: ["Smart Cities", "Security" , "Industrial & Logistics" ],
       popularity: "High",
       image: anpr
     },
@@ -227,7 +218,7 @@ const Applications: React.FC = () => {
       title: "Object Counting",
       description: "Use cameras for automated object counting with deep learning.",
       devices: ["Camera"],
-      industries: ["Industrial Automation"],
+      industries: ["Industrial & Logistics"],
       popularity: "Medium",
       image: objcou
     },
@@ -235,7 +226,7 @@ const Applications: React.FC = () => {
       title: "Eye Gaze Detection",
       description: "Eye tracking and gaze detection for monitoring the attentiveness and stress levels.",
       devices: ["Camera"],
-      industries: ["Smart Retail", "Healthcare"],
+      industries: ["Smart Retail"],
       popularity: "Low",
       image: eyegaz
     },
@@ -251,7 +242,7 @@ const Applications: React.FC = () => {
       title: "Personal Protective Equipment Detection",
       description: "Automated safety and compliance monitoring to minimize accidents and increase efficiency.",
       devices: ["Camera"],
-      industries: ["Safety", "Industrial Automation"],
+      industries: ["Safety", "Industrial & Logistics"],
       popularity: "High",
       image: safmon
     },
@@ -283,7 +274,7 @@ const Applications: React.FC = () => {
       title: "Detect Stopping Vehicles",
       description: "Detect unexpected vehicle stops, anomalies, and dangerous situations automatically.",
       devices: ["Camera"],
-      industries: ["Smart Cities", "Logistics"],
+      industries: ["Smart Cities", "Industrial & Logistics"],
       popularity: "Medium",
       image: stoveidet
     },
@@ -322,7 +313,7 @@ const Applications: React.FC = () => {
     {
       title: "Intrusion Detection",
       description: "Detect intrusion events in pre-defined areas by identifying the target's position, date and time.",
-      devices: ["Camera", "Drone", "Satellite"],
+      devices: ["Camera", "Drone"],
       industries: ["Security", "Defence"],
       popularity: "High",
       image: intdet
@@ -354,7 +345,7 @@ const Applications: React.FC = () => {
     {
       title: "Camouflage & Concealment Detection",
       description: "Identify hidden personnel or vehicles using AI-assisted vision.",
-      devices: ["Camera", "Satellite"],
+      devices: ["Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: comcon
@@ -362,7 +353,7 @@ const Applications: React.FC = () => {
     {
       title: "Border and Perimeter Monitoring",
       description: "Monitor borders and sensitive areas for unauthorized crossings.",
-      devices: ["Camera", "Drone", "Satellite"],
+      devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: perpro
@@ -370,7 +361,7 @@ const Applications: React.FC = () => {
     {
       title: "Real-Time Battlefield Analysis",
       description: "Identify enemy positions, vehicles, and activities in combat zones.",
-      devices: ["Camera", "Drone", "Satellite"],
+      devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: batana
@@ -386,7 +377,7 @@ const Applications: React.FC = () => {
     {
       title: "Automated Target Recognition (ATR)",
       description: "Identify enemy assets, vehicles, and personnel using AI.",
-      devices: ["Drone", "Satellite", "Camera"],
+      devices: ["Drone", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: atr
@@ -419,14 +410,14 @@ const Applications: React.FC = () => {
       title: "Supply Chain Monitoring",
       description: "AI-based monitoring of logistics, supply lines, and inventory.",
       devices: ["Camera", "Drone"],
-      industries: ["Manufacturing", "Logistics"],
+      industries: ["Industrial & Logistics"],
       popularity: "Medium",
       image: pallog
     },
     {
       title: "Fleet & Convoy Monitoring",
       description: "Track and optimize convoy movement for operational security.",
-      devices: ["Drone", "Camera", "Satellite"],
+      devices: ["Drone", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: fleetmon
@@ -434,7 +425,7 @@ const Applications: React.FC = () => {
     {
       title: "Unmanned Submarine Surveillance",
       description: "AI-driven underwater reconnaissance for naval operations.",
-      devices: ["Autonomous Submarine", "Underwater Drone"],
+      devices: ["Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: undwat
@@ -442,7 +433,7 @@ const Applications: React.FC = () => {
     {
       title: "Maritime Anomaly Detection",
       description: "Identify unauthorized or suspicious vessels near military areas.",
-      devices: ["Satellite", "Drone", "Camera"],
+      devices: ["Drone", "Camera"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: marine
