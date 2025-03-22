@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import hazzon from "../assets/hazzone.png";
@@ -28,7 +30,6 @@ import perpro from "../assets/perpro.png";
 import batana from "../assets/batana.png";
 import expdet from "../assets/expdet.png";
 import atr from "../assets/atr.png";
-import snigla from "../assets/snigla.png";
 import stressdet from "../assets/stressdet.png";
 import leakdet from "../assets/leakdet.png";
 import pallog from "../assets/pallog.png";
@@ -112,7 +113,7 @@ const Applications: React.FC = () => {
     {
       img: smartretail,
       title: "Smart Retail",
-      desc: "Improve model accuracy by 20%. Boost revenue, reduce costs, improve in-store CX. 10X in-store CX with BARQ",
+      desc: "Improve model accuracy by 20%. Boosting revenue, reducing costs, improving in-store CX. 10X in-store CX with BARQ",
       filter: "Smart Retail"
     }
   ];
@@ -134,7 +135,7 @@ const Applications: React.FC = () => {
     {
       img: wearablez,
       title: "Wearables",
-      desc: "Boost decision making by 4x, reduce power usage by 65%, improve response time by 95%. Wear smarter with BARQ",
+      desc: "Boost decision making accuracy by 4x, reduce power consumption by 85%, decrease latency by 95%. Wear smarter with BARQ",
       filter: "Wearable"
     }
   ];
@@ -381,14 +382,6 @@ const Applications: React.FC = () => {
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: atr
-    },
-    {
-      title: "Enemy Sniper & Spotter Detection",
-      description: "Detect sniper scopes and reflections using AI-based analysis.",
-      devices: ["Camera", "Drone"],
-      industries: ["Defence", "Security"],
-      popularity: "Medium",
-      image: snigla
     },
     {
       title: "Fatigue & Stress Detection for Soldiers",
@@ -651,9 +644,11 @@ const Applications: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{useCase.title}</h3>
                   <p className="text-gray-600 mb-4">{useCase.description}</p>
-                  <button className="text-primary hover:text-primary-dark font-medium transition-colors">
-                    Learn more →
-                  </button>
+                    <Link to="/contact">
+                      <button className="text-primary hover:text-primary-dark font-medium transition-colors">
+                        Learn more →
+                      </button>
+                    </Link>
                 </div>
               </div>
             ))}

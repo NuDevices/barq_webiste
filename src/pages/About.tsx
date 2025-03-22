@@ -17,7 +17,7 @@ const About: React.FC = () => {
   // Company milestones
   const milestones = [
     {
-      year: "2025",
+      year: "2024",
       title: "Foundation",
       description: "BARQ was established in Dubai, UAE"
     },
@@ -171,7 +171,7 @@ const About: React.FC = () => {
             <div data-aos="fade-right">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Team</h2>
               <p className="text-lg text-gray-600 mb-8">
-                BARQ is a UAE based-tech startup bringing together world-class experts in AI, hardware design, and business strategy. 
+                BARQ is a UAE based tech startup bringing together world-class experts in AI, hardware design, and business strategy. 
                 Our diverse team is united by a shared vision of transforming the future of AI acceleration.
               </p>
               <div className="grid grid-cols-2 gap-6">

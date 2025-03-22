@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -9,6 +9,10 @@ import productcv2 from "../assets/cv2.png";
 import productV20 from "../assets/Chip.png";
 import productM2 from "../assets/M2.png";
 import productPcie from "../assets/PCIe.png";
+
+
+
+
 
 const Products: React.FC = () => {
   const productFamilies = [
@@ -31,6 +35,7 @@ const Products: React.FC = () => {
           availability: { status: "available", label: "Available Now" },
           button1: "Order Now",
           button2: "Learn More",
+          button2Link: "public/documents/Datasheet BARQ-V2 Starter Kit.pdf",
         },
         {
           img: productcv2,
@@ -46,6 +51,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
+          button2Link: "public/documents/Product Brief BARQ-V2 OL.pdf",
         }
       ]
     },
@@ -67,10 +73,11 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
+          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
         },
         {
           img: productM2,
-          title: "BARQ V-20 M2 AI Edge Accelerator Module",
+          title: "BARQ V-20 M2 AI Accelerator Module",
           desc: "A versatile M2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs.",
           slogan: "Accelerate with BARQ",
           specs: [
@@ -82,6 +89,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
+          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
         },
         {
           img: productPcie,
@@ -97,10 +105,17 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
+          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
         }
       ]
     }
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);  
+
+
 
   const comparisonStats = [
     { label: "Faster Processing", value: "20x", description: "Compared to CPU-based solutions" },
@@ -112,6 +127,7 @@ const Products: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       <Header />
+
 
       {/* Hero Section with 3D Parallax Effect */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
@@ -198,7 +214,7 @@ const Products: React.FC = () => {
                             </button>
                           </Link>
                           <button 
-                            onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
+                            onClick={() => window.open(product.button2Link, "_blank")}
                             className="flex-1 border border-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-all"
                           >
                             {product.button2}
