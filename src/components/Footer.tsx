@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logowot.png";
+import Logo from "../assets/logovwot.png";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <img src={Logo} alt="BARQ" className="h-24 w-auto" /> {/* Increased size from h-8 to h-12 */}
+              <img src={Logo} alt="BARQ" className="h-28 w-auto" /> {/* Increased size from h-8 to h-12 */}
             </div>
             <p className="text-gray-400 mb-6">
               Pioneering the future of AI acceleration with cutting-edge hardware solutions for edge computing and smart vision applications.

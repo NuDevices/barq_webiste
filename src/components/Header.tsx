@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/logobot.png";
+import Logo from "../assets/logohbot.png";
 
 const Header: React.FC = () => {
   const location = useLocation();

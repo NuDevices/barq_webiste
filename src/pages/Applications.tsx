@@ -82,7 +82,7 @@ const Applications: React.FC = () => {
     {
       img: industrial,
       title: "Industrial & Logistics",
-      desc: "Increase operational efficiency by 8x, reduce downtime by 70%, enhance supply chain visibility by 90%. Power industry with BARQ.",
+      desc: "Increase operational efficiency by 8x, reduce downtime by 70%, enhance supply chain visibility by 90%. Power industry with BARQ",
       filter: "Industrial & Logistics"
     },
     {
@@ -94,7 +94,7 @@ const Applications: React.FC = () => {
     {
       img: security,
       title: "Security",
-      desc: "Enhance threat detection by 3x, reduce response time by 70%, improve situational awareness by 90%. Secure better with BARQ.",
+      desc: "Enhance threat detection by 3x, reduce response time by 70%, improve situational awareness by 90%. Secure better with BARQ",
       filter: "Security"
     },
     {

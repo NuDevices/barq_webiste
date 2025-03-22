@@ -67,8 +67,8 @@ const Products: React.FC = () => {
         },
         {
           img: productM2,
-          title: "BARQ V-20 M.2 AI Edge Accelerator Module",
-          desc: "A versatile M.2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs. Accelerate with BARQ",
+          title: "BARQ V-20 M2 AI Edge Accelerator Module",
+          desc: "A versatile M2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs. Accelerate with BARQ",
           specs: [
             "20 TOPS AI Compute",
             "M.2 22x80 Form Factor",
