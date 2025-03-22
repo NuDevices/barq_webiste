@@ -19,12 +19,13 @@ const Products: React.FC = () => {
         {
           img: productV2,
           title: "BARQ V-2 PCIe FPGA Starter Kit",
-          desc: "A development-ready FPGA board with pre-synthesized 2 TOPS of AI acceleration IP, perfect for prototyping and testing computer vision applications. Start building with BARQ",
+          desc: "A development-ready FPGA board with pre-synthesized 2 TOPS of AI acceleration IP, perfect for prototyping and testing computer vision applications.",
+          slogan: "Start building with BARQ",
           specs: [
-            "2 TOPS AI Compute",
-            "PCIe Gen3 x4 Interface",
+            "Pre-synthesized AI IP",
             "Development Tools Included",
-            "Pre-synthesized AI IP"
+            "PCIe Gen3 x4 Interface",
+            "2 TOPS AI Compute"
           ],
           price: "$999",
           availability: { status: "available", label: "Available Now" },
@@ -34,12 +35,13 @@ const Products: React.FC = () => {
         {
           img: productcv2,
           title: "BARQ V-2 AI Edge Chip-on-board",
-          desc: "A compact chip-on-board solution for embedded AI acceleration featuring 2 TOPS, perfect for IoT devices and edge computing applications. Build smarter with BARQ",
+          desc: "A compact chip-on-board solution for embedded AI acceleration featuring 2 TOPS, perfect for IoT devices and edge computing applications.",
+          slogan: "Build smarter with BARQ",
           specs: [
-            "2 TOPS AI Compute",
-            "<1W Power Consumption",
+            "Edge-optimized Architecture",
             "Compact Form Factor",
-            "Edge-optimized Architecture"
+            "<1W Power Consumption",
+            "2 TOPS AI Compute"
           ],
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
@@ -53,13 +55,14 @@ const Products: React.FC = () => {
       products: [
         {
           img: productV20,
-          title: "BARQ V-20 AI Edge Chip-on-board",
-          desc: "A compact chip-on-board solution for embedded AI acceleration featuring 20 TOPS, perfect for IoT devices and edge computing applications. Build smarter with BARQ",
+          title: "BARQ V-20 AI Chip-on-board",
+          desc: "A compact chip-on-board solution for embedded AI acceleration featuring 20 TOPS, perfect for IoT devices and edge computing applications.",
+          slogan: "Build smarter with BARQ",
           specs: [
-            "20 TOPS AI Compute",
-            "5W Power Consumption",
+            "Edge-optimized Architecture",
             "Compact Form Factor",
-            "Edge-optimized Architecture"
+            "5W Power Consumption",
+            "20 TOPS AI Compute"
           ],
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
@@ -68,12 +71,13 @@ const Products: React.FC = () => {
         {
           img: productM2,
           title: "BARQ V-20 M2 AI Edge Accelerator Module",
-          desc: "A versatile M2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs. Accelerate with BARQ",
+          desc: "A versatile M2 form factor AI accelerator delivering 20 TOPS AI compute that easily integrates into laptops and small form factor PCs.",
+          slogan: "Accelerate with BARQ",
           specs: [
-            "20 TOPS AI Compute",
-            "M.2 22x80 Form Factor",
+            "Plug-and-Play Design",
             "PCIe Gen3 x4 Interface",
-            "Plug-and-Play Design"
+            "M.2 22x80 Form Factor",
+            "20 TOPS AI Compute"
           ],
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
@@ -82,12 +86,13 @@ const Products: React.FC = () => {
         {
           img: productPcie,
           title: "BARQ V-20 PCIe AI Accelerator Card",
-          desc: "A high-performance PCIe card designed for workstations and servers, offering powerful AI acceleration capabilities with active cooling. Transform with BARQ",
+          desc: "A high-performance PCIe card designed for workstations and servers, offering powerful AI acceleration capabilities with active cooling.",
+          slogan: "Transform with BARQ",
           specs: [
-            "20 TOPS AI Compute",
-            "PCIe Gen3 x8 Interface",
+            "Server-grade Reliability",
             "Active Cooling System",
-            "Server-grade Reliability"
+            "PCIe Gen3 x8 Interface",
+            "20 TOPS AI Compute"
           ],
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
@@ -97,7 +102,6 @@ const Products: React.FC = () => {
     }
   ];
 
-  // Stats for the comparison section
   const comparisonStats = [
     { label: "Faster Processing", value: "20x", description: "Compared to CPU-based solutions" },
     { label: "Power Efficiency", value: "70%", description: "Lower power consumption" },
@@ -144,65 +148,64 @@ const Products: React.FC = () => {
               <p className="text-xl text-gray-600">{family.description}</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className={`grid ${family.products.length === 2 ? 'md:grid-cols-2 max-w-5xl' : 'md:grid-cols-3'} gap-8 mx-auto`}>
               {family.products.map((product, productIndex) => (
-                <div key={productIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                  {/* Product Image with Availability Tag */}
-                  <div className="relative">
-                    <img 
-                      src={product.img} 
-                      alt={product.title} 
-                      className="w-full h-48 object-contain p-4 bg-gray-50"
-                    />
-                    <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-medium ${
-                      product.availability.status === 'available' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-blue-100 text-blue-800'
-                    }`}>
-                      {product.availability.label}
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">{product.title}</h3>
-                    <p className="text-gray-600 mb-4">{product.desc.split('.').slice(0, -1).join('.')}.</p>
-                    <p className="font-bold text-primary mb-6">{product.desc.split('.').slice(-2)[0].trim()}.</p>
-                    
-                    {/* Price if available */}
-                    {product.price && (
-                      <div className="mb-6">
-                        <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                        <span className="text-gray-500 ml-2">USD</span>
+                <div key={productIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 h-[500px] flex flex-col">
+                    <div className="relative h-32 bg-gray-50 flex items-center justify-center">
+                      <img 
+                        src={product.img} 
+                        alt={product.title} 
+                        className="h-24 w-auto object-contain"
+                      />
+                      <div className={`absolute top-2 right-2 px-3 py-1 rounded-full text-sm font-medium ${
+                        product.availability.status === 'available' 
+                          ? 'bg-green-100 text-green-800' 
+                          : 'bg-blue-100 text-blue-800'
+                      }`}>
+                        {product.availability.label}
                       </div>
-                    )}
-                    
-                    {/* Specifications */}
-                    <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                      <h4 className="font-semibold mb-2">Key Specifications</h4>
-                      <ul className="space-y-2">
-                        {product.specs.map((spec, index) => (
-                          <li key={index} className="flex items-center text-sm text-gray-600">
-                            <span className="mr-2">•</span>
-                            {spec}
-                          </li>
-                        ))}
-                      </ul>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link to="/contact" className="flex-1">
-                        <button className="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition-all">
-                          {product.button1}
-                        </button>
-                      </Link>
-                      <button 
-                        onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
-                        className="flex-1 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-all"
-                      >
-                        {product.button2}
-                      </button>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
+                      <p className="text-sm text-gray-600 mb-2">{product.desc}</p>
+                      <p className="text-sm font-bold text-primary mb-2">{product.slogan}</p>
+                      
+                      {product.price && (
+                        <div className="mb-2">
+                          <span className="text-xl font-bold text-gray-900">{product.price}</span>
+                          <span className="text-gray-500 ml-2">USD</span>
+                        </div>
+                      )}
+                      
+                      <div className="mt-auto">
+                        <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                          <h4 className="text-sm font-semibold mb-2">Key Specifications</h4>
+                          <ul className="space-y-1">
+                            {product.specs.map((spec, index) => (
+                              <li key={index} className="flex items-center text-xs text-gray-600">
+                                <span className="mr-2">•</span>
+                                {spec}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <Link to="/contact" className="flex-1">
+                            <button className="w-full bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-dark transition-all">
+                              {product.button1}
+                            </button>
+                          </Link>
+                          <button 
+                            onClick={() => window.open("/documents/Specifications BARQ-V20.pdf", "_blank")}
+                            className="flex-1 border border-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-all"
+                          >
+                            {product.button2}
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
                 </div>
               ))}
             </div>
@@ -256,7 +259,7 @@ const Products: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your AI Vision Applications?</h2>
           <p className="text-xl text-gray-600 mb-8">Contact our team to discuss your specific requirements and find the perfect BARQ solution for your needs.</p>
-          <Link to="/contact">
+          <Link to="/contact#form">
             <button className="bg-primary text-white px-8 py-4 rounded-xl font-medium hover:bg-primary-dark transition-all text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               Get in Touch
             </button>

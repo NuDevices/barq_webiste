@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-white to-gray-50 relative">
+      <section id="form" className="pt-32 pb-16 px-4 bg-gradient-to-b from-white to-gray-50 relative">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark">
             Get in Touch
