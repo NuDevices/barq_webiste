@@ -35,7 +35,7 @@ const Products: React.FC = () => {
           availability: { status: "available", label: "Available Now" },
           button1: "Order Now",
           button2: "Learn More",
-          button2Link: "public/documents/Datasheet BARQ-V2 Starter Kit.pdf",
+          button2Link: "documents/Datasheet BARQ-V2 Starter Kit.pdf",
         },
         {
           img: productcv2,
@@ -51,7 +51,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
-          button2Link: "public/documents/Product Brief BARQ-V2 OL.pdf",
+          button2Link: "documents/Product Brief BARQ-V2 OL.pdf",
         }
       ]
     },
@@ -73,7 +73,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
-          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
+          button2Link: "documents/Product Brief BARQ-V20 OL.pdf",
         },
         {
           img: productM2,
@@ -89,7 +89,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
-          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
+          button2Link: "documents/Product Brief BARQ-V20 OL.pdf",
         },
         {
           img: productPcie,
@@ -105,7 +105,7 @@ const Products: React.FC = () => {
           availability: { status: "coming", label: "Q4 2025" },
           button1: "Pre-order",
           button2: "Learn More",
-          button2Link: "public/documents/Product Brief BARQ-V20 OL.pdf",
+          button2Link: "documents/Product Brief BARQ-V20 OL.pdf",
         }
       ]
     }

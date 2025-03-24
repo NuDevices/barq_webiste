@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <div>© {currentYear} BARQTECH TRADING FZCO. All rights reserved.</div>
           <div className="mt-4 md:mt-0 text-gray-500">
-            The hardware to push the boundaries of AI performance. Made in the UAE.
+            Lightning Fast AI Hardware. Made in the UAE.
           </div>
         </div>
       </div>
