@@ -82,7 +82,7 @@ const Products: React.FC = () => {
           slogan: "Accelerate with BARQ",
           specs: [
             "Plug-and-Play Design",
-            "PCIe Gen3 x4 Interface",
+            "PCIe Gen3 x8 Interface",
             "M.2 22x80 Form Factor",
             "20 TOPS AI Compute"
           ],
