@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import Logo from "../assets/logohbot.png";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+
+  const closeDropdowns = () => {
+    setMenuOpen(false);
+    setAboutDropdownOpen(false);
+  };
 
   return (
     <header className="bg-white/90 backdrop-blur-md shadow-lg fixed top-0 left-0 w-full z-50 py-4 px-6">
@@ -15,25 +22,80 @@ const Header: React.FC = () => {
           <img 
             src={Logo}
             alt="BARQTECH" 
-            className="h-16 w-auto" // Increased size from h-12 to h-16
+            className="h-16 w-auto"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          {["/products", "/applications", "/about", "/contact"].map((path) => (
-            <Link
-              key={path}
-              to={path}
-              className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
-                isActive(path)
+          <Link
+            to="/products"
+            className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
+              isActive("/products")
+                ? "bg-[#2CB2DD] text-white shadow-md"
+                : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+            }`}
+          >
+            Products
+          </Link>
+          <Link
+            to="/applications"
+            className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
+              isActive("/applications")
+                ? "bg-[#2CB2DD] text-white shadow-md"
+                : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+            }`}
+          >
+            Applications
+          </Link>
+
+          {/* About Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+              className={`flex items-center gap-1 px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/about") || isActive("/news")
                   ? "bg-[#2CB2DD] text-white shadow-md"
                   : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
               }`}
             >
-              {path.replace("/", "").charAt(0).toUpperCase() + path.replace("/", "").slice(1)}
-            </Link>
-          ))}
+              About
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-300 ${
+                  aboutDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {aboutDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50">
+                <Link
+                  to="/about"
+                  onClick={closeDropdowns}
+                  className="block px-5 py-3 text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD] transition"
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/news"
+                  onClick={closeDropdowns}
+                  className="block px-5 py-3 text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD] transition"
+                >
+                  News
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/contact"
+            className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
+              isActive("/contact")
+                ? "bg-[#2CB2DD] text-white shadow-md"
+                : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+            }`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -63,20 +125,61 @@ const Header: React.FC = () => {
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md shadow-lg">
           <nav className="flex flex-col space-y-2 p-4">
-            {["/products", "/applications", "/about", "/contact"].map((path) => (
-              <Link
-                key={path}
-                to={path}
-                className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
-                  isActive(path)
-                    ? "bg-[#2CB2DD] text-white"
-                    : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
-                }`}
-                onClick={() => setMenuOpen(false)}
-              >
-                {path.replace("/", "").charAt(0).toUpperCase() + path.replace("/", "").slice(1)}
-              </Link>
-            ))}
+            <Link
+              to="/products"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/products")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              Products
+            </Link>
+            <Link
+              to="/applications"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/applications")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              Applications
+            </Link>
+            <Link
+              to="/about"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/about")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/news"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/news")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              News
+            </Link>
+            <Link
+              to="/contact"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/contact")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       )}
