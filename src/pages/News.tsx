@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Baker from "../assets/Baker.jpg";
-import DSO from "../assets/dubaisiliconoasis.jpg";
+import DSO from "../assets/dso.jpg";
 
 const News: React.FC = () => {
   return (
