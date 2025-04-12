@@ -394,7 +394,7 @@ const Applications: React.FC = () => {
     {
       title: "Chemical and Biohazard Leak Detection",
       description: "Identify hazardous material leaks in combat or storage sites.",
-      devices: ["Camera", "Drone", "Wearable"],
+      devices: ["Camera", "Drone"],
       industries: ["Defence", "Security"],
       popularity: "Medium",
       image: leakdet
