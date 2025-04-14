@@ -5,6 +5,8 @@ import Product from "./pages/Product";
 import About from "./pages/About";
 import Applications from "./pages/Applications";
 import News from "./pages/News";
+import SpontaneousApplication from './pages/SpontaneousApplication';
+
 
 
 const App: React.FC = () => {
@@ -17,6 +19,7 @@ const App: React.FC = () => {
         <Route path="/products" element={<Product />} />
         <Route path="/applications" element={<Applications />} />
         <Route path="/news" element={<News />} />
+        <Route path="/careers" element={<SpontaneousApplication />} />
       </Routes>
     </Router>
   );

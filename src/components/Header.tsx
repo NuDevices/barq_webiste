@@ -96,6 +96,16 @@ const Header: React.FC = () => {
           >
             Contact
           </Link>
+          <Link
+            to="/careers"
+            className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
+              isActive("/careers")
+                ? "bg-[#2CB2DD] text-white shadow-md"
+                : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+            }`}
+          >
+            Careers
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -179,6 +189,17 @@ const Header: React.FC = () => {
               onClick={closeDropdowns}
             >
               Contact
+            </Link>
+            <Link
+              to="/careers"
+              className={`px-4 py-3 rounded-lg text-lg transition-all duration-300 ${
+                isActive("/careers")
+                  ? "bg-[#2CB2DD] text-white"
+                  : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
+              }`}
+              onClick={closeDropdowns}
+            >
+              Careers
             </Link>
           </nav>
         </div>
