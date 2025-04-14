@@ -82,6 +82,13 @@ const Header: React.FC = () => {
                 >
                   News
                 </Link>
+                <Link
+                  to="/careers"
+                  onClick={closeDropdowns}
+                  className="block px-5 py-3 text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD] transition"
+                >
+                  Careers
+                </Link>
               </div>
             )}
           </div>
@@ -96,16 +103,8 @@ const Header: React.FC = () => {
           >
             Contact
           </Link>
-          <Link
-            to="/careers"
-            className={`px-4 py-2 rounded-lg text-lg transition-all duration-300 ${
-              isActive("/careers")
-                ? "bg-[#2CB2DD] text-white shadow-md"
-                : "text-gray-700 hover:bg-[#2CB2DD]/10 hover:text-[#2CB2DD]"
-            }`}
-          >
-            Careers
-          </Link>
+
+
         </nav>
 
         {/* Mobile Menu Button */}
